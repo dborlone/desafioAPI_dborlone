@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "eb9f2a6d-929b-44a6-9f11-28332b1511e5",
+		"name": "Desafio PAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01-ListStates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/location/state",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"state"
+					]
+				},
+				"description": "Lista os estados"
+			},
+			"response": []
+		},
+		{
+			"name": "02-ListCounty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/location/state/11/county",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"state",
+						"11",
+						"county"
+					]
+				},
+				"description": "Lista os estados"
+			},
+			"response": []
+		},
+		{
+			"name": "03-GetAddressByCEP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/location/street/05864180",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"street",
+						"05864180"
+					]
+				},
+				"description": "Lista os estados"
+			},
+			"response": []
+		},
+		{
+			"name": "04-GetCustomerByCPF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/40255597819",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"40255597819"
+					]
+				},
+				"description": "Lista os estados"
+			},
+			"response": []
+		},
+		{
+			"name": "05-UpdateCustomerByCPF",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf\": \"40255597818\",\n    \"name\": \"Danilo Romualdo Borlone\",\n    \"address\": {\n        \"zipCode\": \"05864-180\",\n        \"addressName\": \"Rua Remo Sarti, 320\",\n        \"additionalAddressInformation\": \"\",\n        \"district\": \"Jardim Remo\",\n        \"city\": {\n            \"name\": \"São Paulo\",\n            \"state\": {\n                \"id\": 11,\n                \"shortName\": \"SP\",\n                \"name\": \"São Paulo\",\n                \"region\": \"Sudeste\",\n                \"country\": {\n                    \"name\": \"Brasil\"\n                }\n            }\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/40255597819",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"40255597819"
+					]
+				},
+				"description": "Lista os estados"
+			},
+			"response": []
+		}
+	]
+}
